@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title>Login Page</title>
+</head>
+
+<!--  STYLING -->
+<style>
+    body{
+        background-image: url("img1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+    }
+    container {
+        text-align: center;
+        margin-top: 50%;
+    }
+
+    h1 {
+        color: red;
+    }
+
+    nav {
+        padding: 30px;
+        text-align: center;
+    } 
+
+    footer {
+        text-align: center;
+    }
+</style>
+
+<container>
+
+    <body>
+        <h1>P2PBank</h1>
+        <nav>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+        <article>
+            <form>
+                <!-- Inputs -->
+                <label for="name">Username:</label>
+                <input type="text" id="name" name="name" required>
+                <p></p>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <p>
+                    <button type="button" id="loginButton" onclick="attemptLogin()">Login</button>
+                </p>
+            </form>
+            <script>
+                var loginAttempts = 0;
+                var maxLoginAttempts = 3;
+
+                function attemptLogin() {
+                    var name = document.getElementById('name').value;
+                    var password = document.getElementById('password').value;
+
+                    if (name && password) {
+                        if (loginAttempts < maxLoginAttempts) {
+                            promptLogin();
+                        } else if (loginAttempts > maxLoginAttempts) {
+                            disableLoginButton();
+                            alert('You have reached the maximum login attempts. Please try again later.');
+                        }
+                    } else {
+                        loginAttempts += 1;
+                        alert('Please fill in all the required fields.');
+                    }
+                }
+
+                function promptLogin() {
+                    alert('You are logged in!');
+                    window.location.href = 'Mainpage.html';
+                }
+
+                function disableLoginButton() {
+                    var loginButton = document.getElementById('loginButton');
+                    loginButton.disabled = true;
+                }
+            </script>
+            <p>
+                <a href="ForgetPage.html">Forgot Password</a>
+            </p>
+        </article>
+    </body>
+</container>
+<footer>
+    Copyright © P2PBank (Republic Poly) Pte. Ltd.
+</footer>
+
+</html>

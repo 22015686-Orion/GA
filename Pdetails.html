@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+
+    <!-- STYLING -->
+    <style>
+        h1 {
+            color: red;
+        }
+
+        container {
+            text-align: center;
+            margin-top: 50%;
+        }
+
+        body{
+        background-image: url("img1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+    }
+
+        footer {
+            text-align: center;
+        }
+
+        /* Added styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Display data in a column layout */
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<container>
+    <body>
+        <h1>Personal Details</h1>
+        <nav>
+            <a href="Mainpage.html">Home</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="ForgetPage.html">Forgot Password</a>
+        </nav>
+        <article>
+            <!-- Display data in a column layout -->
+            <div class="column">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Phone Number:</strong> 9876 5432</p>
+                <p><strong>Bank Account:</strong> 555-123-4567</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Date of Birth:</strong> 1985-07-15</p>
+                <p><strong>Bank Amount:</strong> $5000</p>
+            </div>
+        </article>
+    </body>
+</container>
+<footer>
+    Copyright © P2PBank (Republic Poly) Pte. Ltd.
+</footer>
+</html>

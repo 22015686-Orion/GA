@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title>Forget Page</title>
+</head>
+
+<style>
+    container {
+        text-align: center;
+        margin-top: 50%;
+    }
+
+    h1 {
+        color: red;
+    }
+
+    body{
+        background-image: url("img1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+    }
+    footer {
+        text-align: center;
+    }
+
+    nav {
+        padding: 30px;
+        text-align: center;
+    }
+</style>
+<container>
+
+    <body>
+        <h1>
+            <!-- Header  -->
+            Forget Password
+        </h1>
+        <nav>
+            <a href="Mainpage.html">Home</a>
+            <a href="contactus.html">Contact Us</a>
+        </nav>
+        <article>
+            <form>
+                <!-- Inputs -->
+                <label for="name">Username:</label>
+                <input type="text" id="name" name="name" required><br>
+                <p>
+
+                </p>
+                <label for="newPassword">New Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required><br>
+                <p>
+
+                </p>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+                <p>
+
+                </p>
+            </form>
+
+            <!-- Alerts and Brings back to normal page -->
+            <p>
+            <div>
+                <button onclick="displayMessage()">Confirm</button>
+            </div>
+
+            <script>
+                function promptRegistration() {
+                    alert("Password Changed!");
+                    window.location.href = "Mainpage.html";
+                }
+
+                function displayMessage() {
+                    var newPassword = document.getElementById('newPassword').value;
+                    var confirmPassword = document.getElementById('confirmPassword').value;
+
+                    if (newPassword == confirmPassword) {
+                        promptRegistration();
+                    } else {
+                        alert("Passwords do not match.");
+                    }
+                }
+            </script>
+        </article>
+    </body>
+</container>
+<footer>
+    Copyright © P2PBank (Republic Poly) Pte. Ltd.
+</footer>
+
+</html>

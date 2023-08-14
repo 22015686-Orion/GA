@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITLE -->
+    <title>Main Page</title>
+</head>
+
+<!--  STYLING -->
+<style>
+    h1 {
+        color: red;
+    }
+
+    container {
+        text-align: center;
+        margin-top: 50%;
+    }
+
+    nav {
+        padding: 30px;
+        text-align: center;
+    }
+
+    article {
+        background-image: url("img1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .Moneyt, .Personal, .Transac, .logout {
+        text-align: center;
+        margin: 20px;
+    }
+
+    .btn {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+
+    footer {
+        text-align: center;
+    }
+</style>
+
+<container>
+
+    <body>
+        <h1>P2PBank</h1>
+        <nav>
+            <a href="contactus.html">Contact Us</a>
+            <a href="ForgetPage.html">Forgot Password</a>
+        </nav>
+
+        <!-- MONEY TRANSFER BUTTON -->
+        <article>
+            <div class="Moneyt">
+                <a href="moneyTrans.html"> <button class="btn">Money Transfer</button></a>
+            </div>
+
+            <!-- Personal Details BUTTON -->
+            <div class="Personal">
+                <a href="LoginPage2.html"> <button class="btn">Personal Details</button></a>
+            </div>
+
+            <!-- Transaction History BUTTON -->
+            <div class="Transac">
+                <a href="Transachistory.html"> <button class="btn">Transaction History</button></a>
+            </div>
+
+            <!-- LOGOUT BUTTON -->
+            <div class="logout">
+                <a href="Loginpage.html">
+                    <button class="btn">Logout</button>
+                </a>
+            </div>
+        </article>
+
+    </body>
+</container>
+<footer>
+    Copyright © P2PBank (Republic Poly) Pte. Ltd.
+</footer>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title>Money Transfer</title>
+</head>
+
+<!-- STYLING -->
+<style>
+    h1 {
+        color: red;
+    }
+
+    container {
+        text-align: center;
+        margin-top: 50%;
+    }
+
+    body{
+        background-image: url("img1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+    }
+
+    footer {
+        text-align: center;
+    }
+</style>
+
+<container>
+
+    <body>
+
+        <!-- HEADER -->
+        <h1>Money Transfer</h1>
+        <nav>
+            <a href="Mainpage.html">Home</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="ForgetPage.html">Forgot Password</a>
+
+        </nav>
+
+        <p></p>
+        <article>
+            <form>
+
+                <!-- Inputs -->
+                <label for="Receipient">Recipient's Bank Account</label>
+                <p></p>
+                <input type="text" name="name" required><br>
+                <p></p>
+                <label for="Amount">Amount</label>
+                <p></p>
+                <input type="number" id="amount" name="amount" required><br>
+                <p></p>
+                <label for="number">OTP</label>
+                <p></p>
+                <input type="number" name="otp" required><br>
+                <p></p>
+                <label for="password">Confirm:</label>
+                <input type="checkbox" name="Confirm" required><br>
+            </form>
+
+            <p></p>
+            <!-- Transfer and Message -->
+            <div>
+                <button onclick="displayMessage()">Transfer</button>
+            </div>
+
+            <script>
+                function displayMessage() {
+                    alert("Transfer Successful!")
+                    window.location.href = 'Mainpage.html';
+                }
+            </script>
+            <p></p>
+
+        </article>
+    </body>
+</container>
+<footer>
+    Copyright © P2PBank (Republic Poly) Pte. Ltd.
+</footer>
+
+</html>
